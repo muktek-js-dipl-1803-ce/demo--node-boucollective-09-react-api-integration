@@ -1,30 +1,22 @@
 # Auth Notes
 
 ### Pre-Configuration
-+ have yeoman installed globally
 
-+ have generator-nxko installed globally
-
-+ generate files/folders with nxko
-  ```
-  yo nxko:react
-  ```
-
-+ configure `package.json` scripts
-  ```json
-  "dev": "npm-run-all --parallel dev:server dev:webpack",
-  "dev:webpack": "NODE_ENV=development ./node_modules/.bin/webpack --watch",
-  "dev:server": "NODE_ENV=development nodemon server.js --watch src --watch server.js --ignore src/client"
++ install superagent as project dependency
+  ```sh
+  npm install --save superagent
   ```
 
 ### Relevant files/folders
 
-+ `server.js` : import + configure:
-  + fallback route is
-```js
++ `src/client/js/ListingsMulti.js`
+  - import superagent
+  - set default state for component as empty array
+  - use superagent to make request to `/api/products` route
+  - set state with returned data
 
-  // React
-  app.use((req, res)=>{
-    res.render('reactApp.ejs')
-  })
-```
++ `src/client/js/ShopsMulti.js`
+  - import superagent
+  - set default state for component as empty array
+  - use superagent to make request to `/api/vendors` route
+  - set state with returned data
