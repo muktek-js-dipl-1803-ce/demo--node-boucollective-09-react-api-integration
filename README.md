@@ -1,4 +1,4 @@
-# Auth Notes
+# React API Integration Notes
 
 ### Pre-Configuration
 
@@ -13,10 +13,10 @@
   - import superagent
   - set default state for component as empty array
   - use superagent to make request to `/api/products` route
-  - set state with returned data
+  - set component state with returned data
 
 + `src/client/js/ShopsMulti.js`
   - import superagent
   - set default state for component as empty array
   - use superagent to make request to `/api/vendors` route
-  - set state with returned data
+  - set component state with returned data
